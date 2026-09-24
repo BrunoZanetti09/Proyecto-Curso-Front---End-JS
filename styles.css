@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f4f7;
+}
+
+/* --- NAV --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 24px;
+  background-color: #06325f;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+/* --- OCULTAR SECCIONES --- */
+.pagina.oculto {
+  display: none;
+}
+
+/* --- INICIO --- */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.galeria-flotante {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.foto-flotante {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.img1 { animation-delay: 0s; }
+.img2 { animation-delay: 0.5s; }
+.img3 { animation-delay: 1s; }
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* --- PRODUCTOS --- */
+#productos h1 {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.tarjeta-producto {
+  flex: 1 1 260px;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background-color: gray;
+}
+
+.tarjeta-contenido {
+  padding: 16px 18px;
+}
+
+.tarjeta-contenido h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.tarjeta-contenido p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.precio {
+  display: block;
+  font-weight: 700;
+  color: #06325f;
+  margin-bottom: 10px;
+}
+
+.btn-carrito {
+  padding: 10px 0;
+  width: 100%;
+  background: #06325f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-carrito:hover {
+  background: #04213e;
+}
+
+/* --- FORMULARIO DE CONTACTO (dentro del overlay) --- */
+.form-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.input-icon {
+  position: relative;
+  margin-top: 0.4rem;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.7rem 0.7rem 0.7rem 2.4rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #06325f;
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 90px;
+  padding-left: 2.4rem;
+}
+
+.form-card textarea + i {
+  top: 20px;
+  transform: none;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #06325f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-card button:hover {
+  background: #04213e;
+}
+
+/* --- OVERLAY (modal de contacto) --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.overlay.oculto {
+  display: none;
+}
+
+.overlay .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+/* --- RESEÑAS (Grid) --- */
+#resenas h1 {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.grid-resenas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resena {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.resena-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.resena-header i {
+  font-size: 2rem;
+  color: #06325f;
+}
+
+.resena-header h3 {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.estrellas {
+  color: #f5b301;
+  font-size: 0.9rem;
+}
+
+.resena p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- MEDIA QUERIES: CONTACTO RESPONSIVO --- */
+@media (max-width: 600px) {
+  .form-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .form-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .overlay .cerrar {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-card {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

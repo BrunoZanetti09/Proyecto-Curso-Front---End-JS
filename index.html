@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Repuestos Moto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSeccion('inicio', event)">Inicio</a></li>
+                <li><a href="#" onclick="mostrarSeccion('productos', event)">Productos</a></li>
+                <li><a href="#" onclick="toggleContacto(event)">Contacto</a></li>
+                <li><a href="#" onclick="mostrarSeccion('resenas', event)">Reseñas</a></li>
+                <li><a href="#" onclick="mostrarSeccion('nosotros', event)">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="overlay-contacto" class="overlay oculto">
+            <section class="form-card">
+                <button class="cerrar" onclick="toggleContacto(event)">&times;</button>
+                <form action="https://formspree.io/f/xgaewbdj" method="POST">
+                    <h2>Contactame</h2>
+                    <label>
+                        Nombre:
+                        <div class="input-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="Nombre">
+                        </div>
+                    </label>
+                    <label>
+                        Correo electrónico:
+                        <div class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email">
+                        </div>
+                    </label>
+                    <label>
+                        Mensaje:
+                        <div class="input-icon">
+                            <i class="fa-solid fa-message"></i>
+                            <textarea name="message"></textarea>
+                        </div>
+                    </label>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- INICIO -->
+        <section id="inicio" class="pagina">
+            <div class="hero">
+                <h1>Repuestos Moto</h1>
+                <p>Todo lo que tu moto necesita, en un solo lugar.</p>
+            </div>
+            <div class="galeria-flotante">
+                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400" alt="Repuesto moto" class="foto-flotante img1">
+                <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=400" alt="Repuesto moto" class="foto-flotante img2">
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400" alt="Repuesto moto" class="foto-flotante img3">
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="pagina oculto">
+            <h1>Productos</h1>
+            <div class="productos">
+
+                <article class="tarjeta-producto">
+                    <img src="images/346114771220-69b1505304246880b917587243184076-1024-1024.jpeg" alt="Kit de Transmisión">
+                    <div class="tarjeta-contenido">
+                        <h2>Kit de Transmisión</h2>
+                        <p>Cadena, piñón y corona reforzados...</p>
+                        <span class="precio">$45.000</span>
+                        <button class="btn-carrito">
+                            <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="images/piston.jpeg" alt="Kit pistón y biela">
+                    <div class="tarjeta-contenido">
+                        <h2>Kit pistón y biela</h2>
+                        <p>Pistón y biela reforzados...</p>
+                        <span class="precio">$30.000</span>
+                        <button class="btn-carrito">
+                            <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="images/cortacadena.jpeg" alt="Kit Corta Cadena">
+                    <div class="tarjeta-contenido">
+                        <h2>Kit Corta Cadena</h2>
+                        <p>Aparato corta cadenas premium</p>
+                        <span class="precio">$15.000</span>
+                        <button class="btn-carrito">
+                            <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="nosotros" class="pagina oculto">
+            <h1>Nosotros</h1>
+            <p>Contá acá la historia de la tienda.</p>
+        </section>
+
+        <!-- RESEÑAS -->
+<section id="resenas" class="pagina oculto">
+    <h1>Reseñas</h1>
+    <div class="grid-resenas">
+
+        <article class="resena">
+            <div class="resena-header">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                    <h3>Carlos G.</h3>
+                    <div class="estrellas">★★★★★</div>
+                </div>
+            </div>
+            <p>Excelente atención, el repuesto llegó a tiempo y anda perfecto.</p>
+        </article>
+
+        <article class="resena">
+            <div class="resena-header">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                    <h3>Marina T.</h3>
+                    <div class="estrellas">★★★★☆</div>
+                </div>
+            </div>
+            <p>Buenos precios, tardó un poco el envío pero valió la pena.</p>
+        </article>
+
+        <article class="resena">
+            <div class="resena-header">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                    <h3>Diego R.</h3>
+                    <div class="estrellas">★★★★★</div>
+                </div>
+            </div>
+            <p>Ya es mi segunda compra, siempre repuestos originales.</p>
+        </article>
+
+        <article class="resena">
+            <div class="resena-header">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                    <h3>Lucía P.</h3>
+                    <div class="estrellas">★★★★★</div>
+                </div>
+            </div>
+            <p>Me asesoraron bien para elegir el kit correcto, recomendado.</p>
+        </article>
+
+    </div>
+</section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function toggleContacto(e) {
+            e.preventDefault();
+            document.getElementById('overlay-contacto').classList.toggle('oculto');
+        }
+
+        function mostrarSeccion(id, e) {
+            e.preventDefault();
+            document.querySelectorAll('.pagina').forEach(sec => sec.classList.add('oculto'));
+            document.getElementById(id).classList.remove('oculto');
+        }
+    </script>
+</body>
+</html>
