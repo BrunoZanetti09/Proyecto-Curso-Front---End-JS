@@ -15,4 +15,6 @@ HTML, CSS y JavaScript vanilla. Los íconos son de Font Awesome.
 
 ## Cómo verlo
 
-Clonar el repo y abrir `index.html` en el navegador, no necesita instalación ni dependencias.
+Sitio en vivo: https://brunozanetti09.github.io/Proyecto-Curso-Front---End-JS/
+
+También podés clonar el repo y abrir `index.html` en el navegador, no necesita instalación ni dependencias.
