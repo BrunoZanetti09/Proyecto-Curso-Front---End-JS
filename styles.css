@@ -252,12 +252,16 @@ nav a {
   position: absolute;
   top: 10px;
   right: 15px;
+  width: auto;
+  padding: 0;
   background: none;
   border: none;
   font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
   color: #888;
 }
+
 /* --- RESEÑAS (Grid) --- */
 #resenas h1 {
   text-align: center;
